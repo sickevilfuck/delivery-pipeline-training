@@ -1,16 +1,5 @@
 sudo: false
 language: node_js
-<<<<<<< HEAD
-node_js:
-- 5.1
-- 4.4
-addons:
-  postgresql: '9.4'
-before_script:
-- bash install.sh
-script:
-- source env.sh && npm run test
-=======
 node_js: 
   - 5.10
 services:
@@ -21,8 +10,6 @@ before_script:
   - bash install.sh
 script:
   - source env.sh && npm run test
-
->>>>>>> abe9cc7f3e6699f972531707f91d6c59c6156d40
 notifications:
   slack: devops-training-spb:EKrhbizOMW4MGPBtII3eRJCy
 deploy:
