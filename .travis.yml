@@ -2,3 +2,13 @@ language: node_js
 node_js:
   - 4.4
   - 5.10
+
+createuser -s crudtest
+psql postgres -c 'create database crudtest'
+
+before_script:
+  - psql postgres -c "ALTER ROLE crudtest WITH PASSWORD 'crudtest';" -U postgres
+
+services:
+  - postgresql
+
