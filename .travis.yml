@@ -8,10 +8,14 @@ before_script:
 script:
   - source env.sh && npm run testsudo: false
 language: node_js
-node_js: '5'
+node_js: 
+  - 5.10
+  - 4.4
 addons:
   postgresql: '9.4'
 before_script:
   - bash install.sh
 script:
   - source env.sh && npm run test
+notifications:
+  slack: devops-training-spb:EKrhbizOMW4MGPBtII3eRJCy
