@@ -8,7 +8,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['powerful-tundra-79856'],
+  app_name: ['hui'],
   /**
    * Your New Relic license key.
    */
