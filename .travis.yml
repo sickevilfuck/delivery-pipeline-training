@@ -2,8 +2,10 @@ sudo: false
 language: node_js
 node_js: 
   - 5.10
-  - 4.4
-postgresql: "9.4"
+services:
+  - postgresql
+addons:
+  postgresql: "9.4"
 before_script:
   - bash install.sh
 script:
