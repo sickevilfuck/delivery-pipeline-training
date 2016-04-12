@@ -1,11 +1,17 @@
+sudo: false
 language: node_js
-node_js:
-  - 4.4
-  - 5.10
-
+node_js: '5'
+addons:
+  postgresql: '9.4'
 before_script:
-  - psql postgres -c "ALTER ROLE crudtest WITH PASSWORD 'crudtest';" -U postgres
-
-services:
-  - postgresql
-
+  - bash install.sh
+script:
+  - source env.sh && npm run testsudo: false
+language: node_js
+node_js: '5'
+addons:
+  postgresql: '9.4'
+before_script:
+  - bash install.sh
+script:
+  - source env.sh && npm run test
